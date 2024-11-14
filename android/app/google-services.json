@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "509956776702",
+    "project_id": "cookita-apps",
+    "storage_bucket": "cookita-apps.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509956776702:android:cd3d7dc42a448326e4fbaf",
+        "android_client_info": {
+          "package_name": "com.example.cookita_apps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnZXSYGXOIDZtGU4OjZADsTYH_WCcoh-w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
