@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'sign_in_page.dart'; // Tambahkan ini
-import 'profile_page.dart'; // Jika ProfilePage ada di file terpisah
+import 'sign_in_page.dart'; // Pastikan file ini ada
+import 'profile_page.dart'; // Pastikan file ini ada
+import 'forgot_password_page.dart'; // Pastikan file ini ada
+
 
 void main() {
   runApp(MyApp());
@@ -16,7 +18,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Halaman Login
 class LoginPage extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -30,10 +31,7 @@ class LoginPage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => ProfilePage()),
-            );
+            Navigator.pop(context);
           },
         ),
         title: Text(
@@ -69,7 +67,7 @@ class LoginPage extends StatelessWidget {
                   filled: true,
                   fillColor: Colors.grey[200],
                   prefixIcon: Icon(Icons.email),
-                  hintText: 'masukkan e-mail',
+                  hintText: 'Masukkan e-mail',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8.0),
                     borderSide: BorderSide.none,
@@ -84,7 +82,7 @@ class LoginPage extends StatelessWidget {
                   filled: true,
                   fillColor: Colors.grey[200],
                   prefixIcon: Icon(Icons.lock),
-                  hintText: 'masukkan password',
+                  hintText: 'Masukkan password',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8.0),
                     borderSide: BorderSide.none,
@@ -96,7 +94,10 @@ class LoginPage extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 child: TextButton(
                   onPressed: () {
-                    // Logika untuk lupa password
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ForgotPasswordPage()),
+                    );
                   },
                   child: Text(
                     'Lupa Password?',
@@ -166,7 +167,6 @@ class LoginPage extends StatelessWidget {
   }
 }
 
-// Halaman Profil
 class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
